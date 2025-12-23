@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藤核智能科技 - AI医疗产学研用解决方案服务商</title>
+    <script src="statics/js/tailwindcss.js"></script>
+    <link href="statics/css/font-awesome.min.css" rel="stylesheet">
+    <script src="statics/js/chart.umd.min.js"></script>
+    <link href="statics/css/inter-font.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .section-padding { padding: 80px 0; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .nav-scrolled { background-color: rgba(255,255,255,0.95); box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+    </style>
+</head>
+<body class="text-gray-800 bg-gray-50">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="statics/images/logo_black.png" alt="藤核智能科技" class="h-10 w-auto object-contain">
+                    <span class="text-xl font-bold text-gray-900">藤核智能科技</span>
+                </a>
+                
+                <!-- 桌面端导航 -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">首页</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition">关于我们</a>
+                    <a href="#products" class="text-gray-700 hover:text-blue-600 font-medium transition">产品中心</a>
+                    <a href="#technology" class="text-gray-700 hover:text-blue-600 font-medium transition">技术优势</a>
+                    <a href="#research" class="text-gray-700 hover:text-blue-600 font-medium transition">研发实力</a>
+                    <a href="#cases" class="text-gray-700 hover:text-blue-600 font-medium transition">合作案例</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">联系我们</a>
+                </nav> 
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">首页</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">关于我们</a>
+                <a href="#products" class="text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">产品中心</a>
+                <a href="#technology" class="text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">技术优势</a>
+                <a href="#research" class="text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">研发实力</a>
+                <a href="#cases" class="text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">合作案例</a>
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition text-center">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首页Hero区域 -->
+    <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-gray-900">
+                        以AI赋能医疗<br>让精准科研与优质诊疗触手可及
+                    </h1>
+                    <p class="mt-6 text-lg text-gray-600 max-w-xl">
+                        聚焦AI医疗的产学研用解决方案服务商，构建覆盖AI医疗智能体、精准医学知识库、科研数据管理等全方位解决方案生态。
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#products" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition text-center font-medium">
+                            探索产品
+                        </a>
+                        <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition text-center font-medium">
+                            咨询合作
+                        </a>
+                    </div>
+                    <div class="mt-12 flex items-center space-x-6">
+                        <div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600">300+三甲医院信赖之选</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-lg opacity-30"></div>
+                        <img src="statics/images/banner.jpg" alt="AI医疗智能体" class="relative rounded-2xl shadow-xl w-full">
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                    <i class="fa fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">AI辅助审核智能体</h4>
+                                    <p class="text-sm text-gray-600">已在复旦大学附属中山医院成功部署</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900">关于藤核智能</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">复旦大学与临港集团共同孵化的高技术企业，致力于成为AI医疗领域的引领者</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">公司简介</h3>
+                    <p class="text-gray-600 mb-4">
+                        上海藤核智能科技有限公司成立于2017年，依托"产学研用"一体化战略闭环，上联复旦大学智能医学研究院的顶尖成果，融合核心团队15年技术沉淀，深度对接中国信息通信研究院权威资源，构建起全方位AI医疗解决方案生态。
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        公司汇聚人工智能、生物信息学、大数据、软件工程等多领域人才，研发的系列产品可大幅提升临床服务效率与资源可及性，助力科研转化和医疗精准化发展。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <div class="text-blue-600 text-3xl mb-3">
+                                <i class="fa fa-bullseye"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">使命</h4>
+                            <p class="text-gray-600">以AI赋能医疗，让精准科研与优质诊疗触手可及</p>
+                        </div>
+                        <div class="bg-indigo-50 p-6 rounded-lg">
+                            <div class="text-indigo-600 text-3xl mb-3">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">愿景</h4>
+                            <p class="text-gray-600">成为AI医疗领域的引领者，以科技筑就健康中国新基石</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">发展历程</h3>
+                    <div class="relative">
+                        <!-- 时间线轴线 -->
+                        <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+                        
+                        <!-- 时间线节点 -->
+                        <div class="space-y-8 relative">
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white z-10">
+                                    <i class="fa fa-check text-xs"></i>
+                                </div>
+                                <div class="ml-6">
+                                    <span class="text-sm font-semibold text-blue-600">2007-2016 积累期</span>
+                                    <p class="text-gray-600 mt-1">承担国家863计划、十三五精准医学专项，与十家大型三甲医院开展合作</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white z-10">
+                                    <i class="fa fa-check text-xs"></i>
+                                </div>
+                                <div class="ml-6">
+                                    <span class="text-sm font-semibold text-blue-600">2017-2022 成长期</span>
+                                    <p class="text-gray-600 mt-1">公司正式成立，筹建复旦大学智能医学研究院，首席科学家当选IAHSI院士</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white z-10">
+                                    <i class="fa fa-check text-xs"></i>
+                                </div>
+                                <div class="ml-6">
+                                    <span class="text-sm font-semibold text-blue-600">2024-至今 突破期</span>
+                                    <p class="text-gray-600 mt-1">罕见病辅助筛查系统上线，与复旦大学附属中山医院达成智能AI辅助审核合作</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-lg mb-3 flex items-center">
+                            <i class="fa fa-trophy text-yellow-500 mr-2"></i>资质荣誉
+                        </h4>
+                        <p class="text-gray-600">软件著作权、发明专利、赛事奖项等共计50余项，获中华医学会等多个权威组织推荐使用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品中心 -->
+    <section id="products" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900">产品中心</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">基于临床数据和知识库的智能体服务平台，为临床、科研、公卫和管理四大领域提供全方位AI赋能</p>
+            </div>
+
+            <!-- 产品分类标签 -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="product-tab active bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium" data-tab="all">全部产品</button>
+                <button class="product-tab bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-medium" data-tab="ai-agent">AI医疗智能体</button>
+                <button class="product-tab bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-medium" data-tab="precision">精准医学</button>
+                <button class="product-tab bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-medium" data-tab="research">智慧科研</button>
+            </div>
+
+            <!-- 产品列表 -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AI医疗智能体系列 -->
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="ai-agent">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fa fa-check-square-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">智能AI辅助审核智能体</h3>
+                    <p class="text-gray-600 mb-4">基于DeepSeek模型与临床规则深度融合，自动化精准审核检验报告，提升效率、降低误判率。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="ai-agent">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fa fa-stethoscope text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">病情分析智能体</h3>
+                    <p class="text-gray-600 mb-4">深度分析临床数据，提供精准病情评估与诊疗建议，辅助医生制定个性化治疗方案。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="ai-agent">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fa fa-user-md text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">智能问诊智能体</h3>
+                    <p class="text-gray-600 mb-4">基于海量医学知识库，提供智能导诊、症状问询、健康科普等服务，提升就医体验。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- 精准医学系列 -->
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="precision">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <i class="fa fa-search text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">iRare罕见病智能筛查系统</h3>
+                    <p class="text-gray-600 mb-4">通过面部特征识别技术，快速评估14岁以下儿童罕见病风险级别，辅助精准诊断。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="precision">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <i class="fa fa-book text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Biointell精准医学知识库</h3>
+                    <p class="text-gray-600 mb-4">整合60+权威生物医学数据库，构建5000万+三元组知识图谱，提供疾病风险评估与治疗建议。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="precision">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <i class="fa fa-dna text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">BioOmics组学数据平台</h3>
+                    <p class="text-gray-600 mb-4">标准化管理基因组、转录组等多组学数据，支持数据提交、审核、发布与共享，促进跨学科研究。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- 智慧科研系列 -->
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="research">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-6">
+                        <i class="fa fa-database text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">MedSDC智能医学科研数据中心</h3>
+                    <p class="text-gray-600 mb-4">集数据存储、处理和分析于一体，为科研院所提供高性能科学计算服务，实现数据互联互通。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="research">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-6">
+                        <i class="fa fa-cubes text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">SmartRDM智慧科研数据资产管理平台</h3>
+                    <p class="text-gray-600 mb-4">整合多系统功能，实现科研数据采集、处理、分析及共享全流程管理，提升数据利用价值。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="product-card card-hover bg-white rounded-xl shadow-md p-6" data-category="research">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-6">
+                        <i class="fa fa-filter text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">DataPulse数据治理平台</h3>
+                    <p class="text-gray-600 mb-4">融合DeepSeek模型与RAG技术，自动解析医疗文档并结构化处理，提升数据治理效率与质量。</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-white border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition font-medium">
+                    查看全部产品 <i class="fa fa-angle-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术优势 -->
+    <section id="technology" class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900">技术优势</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">以核心技术为支撑，构建自主可控的AI医疗技术体系，解决行业卡脖子问题</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="space-y-10">
+                        <!-- 核心技术1 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mt-1">
+                                <i class="fa fa-code-fork"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">临床数据治理与标准化方案</h3>
+                                <p class="text-gray-600">采用OHDSI标准与OMOP通用数据模型，实现非结构化病历自动标注和标准化，构建自动化数据管道。</p>
+                            </div>
+                        </div>
+
+                        <!-- 核心技术2 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mt-1">
+                                <i class="fa fa-shield"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">数据安全应用策略</h3>
+                                <p class="text-gray-600">基于隐私计算技术构建多机构科研数据协作网络，实现数据可用不可见、可控使用，保障数据安全。</p>
+                            </div>
+                        </div>
+
+                        <!-- 核心技术3 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mt-1">
+                                <i class="fa fa-database"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">医学知识库</h3>
+                                <p class="text-gray-600">集成60+权威生物医学数据库，构建5000万+三元组知识图谱，实现国产替代，解决数据垄断问题。</p>
+                            </div>
+                        </div>
+
+                        <!-- 核心技术4 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mt-1">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">医学基础模型</h3>
+                                <p class="text-gray-600">基于知识库构建因果推理逻辑的多模态生物医药AI大模型，突破传统统计模型局限，支持深度临床决策。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl blur-lg opacity-20"></div>
+                        <div class="relative bg-white rounded-2xl shadow-xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">核心能力：大幅降低开发成本和周期</h3>
+                            
+                            <!-- 开发周期对比图表 -->
+                            <div class="h-80 mb-8">
+                                <canvas id="devCycleChart"></canvas>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-6 rounded-lg">
+                                <h4 class="font-semibold text-lg mb-3">快速开发平台</h4>
+                                <p class="text-gray-600 mb-4">医疗场景智能体快速搭建平台，支持可视化拖拽、一键生成，大幅降低医学专业智能体开发门槛。</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center text-gray-600">
+                                        <i class="fa fa-check text-blue-600 mr-2"></i>
+                                        自动清洗标注，数据质量显著提升
+                                    </li>
+                                    <li class="flex items-center text-gray-600">
+                                        <i class="fa fa-check text-blue-600 mr-2"></i>
+                                        可视化拖拽操作，无需复杂编码
+                                    </li>
+                                    <li class="flex items-center text-gray-600">
+                                        <i class="fa fa-check text-blue-600 mr-2"></i>
+                                        开发周期从9个月缩短至8天
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研发实力 -->
+    <section id="research" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900">研发实力</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">学术引领，专业背书，国家级项目加持，成果显著</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">核心团队</h3>
+                    
+                    <!-- 核心人物 -->
+                    <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                            <img src="statics/images/LiuLei.jpg" alt="刘雷教授" class="w-32 h-32 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900">刘雷 教授</h4>
+                                <p class="text-blue-600 font-medium mb-3">首席科学顾问</p>
+                                <ul class="space-y-2 text-gray-600 mb-4">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-user-md text-blue-600 mt-1 mr-2"></i>
+                                        <span>复旦大学智能医学研究院常务副院长、IAHSI院士</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-book text-blue-600 mt-1 mr-2"></i>
+                                        <span>主编《健康医疗数据治理》等权威著作</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-flask text-blue-600 mt-1 mr-2"></i>
+                                        <span>国家十三五精准医学专项项目首席</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-globe text-blue-600 mt-1 mr-2"></i>
+                                        <span>在10余个权威学术组织担任要职</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h4 class="font-semibold text-lg mb-4 flex items-center">
+                            <i class="fa fa-users text-blue-600 mr-2"></i>人才团队
+                        </h4>
+                        <p class="text-gray-600 mb-4">
+                            依托复旦大学智能医学研究院专家团队，汇聚生物信息学、分子生物学、临床医学、大数据、人工智能、软件工程学等多领域人才。
+                        </p>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">15+</div>
+                                <p class="text-sm text-gray-600">核心技术沉淀年限</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">50+</div>
+                                <p class="text-sm text-gray-600">技术人才团队规模</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">10+</div>
+                                <p class="text-sm text-gray-600">博士学历核心成员</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">科研实力</h3>
+                    
+                    <!-- 国家级项目 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                        <h4 class="font-semibold text-lg mb-4 flex items-center">
+                            <i class="fa fa-flag text-blue-600 mr-2"></i>国家级项目加持
+                        </h4>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-600 pl-4 py-1">
+                                <h5 class="font-medium text-gray-900">国家重点研发计划"精准医学研究"专项</h5>
+                                <p class="text-sm text-gray-600">项目编号：2016YFC09011900</p>
+                            </div>
+                            <div class="border-l-4 border-blue-600 pl-4 py-1">
+                                <h5 class="font-medium text-gray-900">国家高技术研究发展计划(863计划)</h5>
+                                <p class="text-sm text-gray-600">目标导向类项目：医疗决策支持系统</p>
+                            </div>
+                            <div class="border-l-4 border-blue-600 pl-4 py-1">
+                                <h5 class="font-medium text-gray-900">传染病国家科技重大专项</h5>
+                                <p class="text-sm text-gray-600">项目编号：2012ZX10002010</p>
+                            </div>
+                            <div class="border-l-4 border-blue-600 pl-4 py-1">
+                                <h5 class="font-medium text-gray-900">新药创制国家科技重大专项</h5>
+                                <p class="text-sm text-gray-600">项目编号：2012ZX09303013</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 标准与背书 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                        <h4 class="font-semibold text-lg mb-4 flex items-center">
+                            <i class="fa fa-certificate text-blue-600 mr-2"></i>政策与标准背书
+                        </h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>OHDSI中国核心参与单位，牵头定制适配中国临床数据的OHDSI标准</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>参与制定的数据治理规范被国家药品监督管理局药品审评中心纳入指导原则</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>联合全国超30家顶级医院建立标准应用体系</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 学术交流 -->
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h4 class="font-semibold text-lg mb-4 flex items-center">
+                            <i class="fa fa-globe text-blue-600 mr-2"></i>学术交流
+                        </h4>
+                        <p class="text-gray-600 mb-4">
+                            连续多年协办和参与国际智能医学大会、中国健康医疗大数据标准模型研讨会等国内外顶级学术会议。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm">OHDSI亚太区研讨会</span>
+                            <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm">临床数据与样本资源库年会</span>
+                            <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm">中国整合生物样本学大会</span>
+                            <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm">罕见病合作交流会</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作案例 -->
+    <section id="cases" class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900">合作案例</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">服务300+三甲医院，与20+头部企业建立战略合作，形成医疗AI生态闭环</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- 典型案例 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden">
+                    <img src="statics/images/复旦大学附属中山医院.jpeg" alt="复旦大学附属中山医院" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">复旦大学附属中山医院</h3>
+                        <p class="text-gray-600 mb-4">部署智能AI辅助审核智能体，显著提升检验报告审核效率，降低误判率。</p>
+                        <span class="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm">AI医疗智能体</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden">
+                    <img src="statics/images/复旦大学上海医学院2.jpeg" alt="复旦大学上海医学院" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">复旦大学上海医学院</h3>
+                        <p class="text-gray-600 mb-4">共建医学科研数据中心与健康医疗科研数据智能体平台，赋能科研创新。</p>
+                        <span class="inline-block bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm">智慧科研</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden">
+                    <img src="statics/images/合作案例-上海临床研究中心.jpg" alt="上海临床研究中心" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">上海临床研究中心</h3>
+                        <p class="text-gray-600 mb-4">打造配套信息化项目智慧科研平台，实现科研数据全流程智能化管理。</p>
+                        <span class="inline-block bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm">智慧科研</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden">
+                    <img src="statics/images/上海市儿童医院.jpg" alt="上海市儿童医院" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">上海市儿童医院</h3>
+                        <p class="text-gray-600 mb-4">部署罕见病辅助决策智能体，提升儿童罕见病诊断效率与准确性。</p>
+                        <span class="inline-block bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-sm">精准医学</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden">
+                    <img src="statics/images/合作案例-河北医科大学医学科研数据中心（实拍图）.jpg" alt="河北医科大学" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">河北医科大学</h3>
+                        <p class="text-gray-600 mb-4">共建医学科研数据中心，实现多源异构数据整合与标准化管理。</p>
+                        <span class="inline-block bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm">智慧科研</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden">
+                    <img src="statics/images/华山医院.jpg" alt="华山医院" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">华山医院</h3>
+                        <p class="text-gray-600 mb-4">部署罕见病辅助决策智能体，构建罕见病精准诊断支持体系。</p>
+                        <span class="inline-block bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-sm">精准医学</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合作客户与战略伙伴 -->
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">合作客户与战略伙伴</h3>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-gray-700 font-medium">华为</span>
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-gray-700 font-medium">浪潮</span>
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-gray-700 font-medium">东软</span>
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-gray-700 font-medium">中国电信</span>
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-gray-700 font-medium">深信服</span>
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-gray-700 font-medium">慧算基因</span>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600 mb-4">更多合作客户包括301医院、武汉协和医院、中山大学附属第一医院等300+三甲医院</p>
+                    <a href="#" class="inline-block text-blue-600 font-medium hover:underline">
+                        查看全部合作客户 <i class="fa fa-angle-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900">联系我们</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">无论您是医疗机构、科研院所还是企业伙伴，我们都期待与您携手合作</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white rounded-xl shadow-md p-8 h-full">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">联系方式</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mt-1">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 mb-1">总部地址</h4>
+                                    <p class="text-gray-600">上海市浦东新区张衡路666号1号楼</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mt-1">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 mb-1">联系电话</h4>
+                                    <p class="text-gray-600">021-33567660</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mt-1">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 mb-1">电子邮箱</h4>
+                                    <p class="text-gray-600">contact@sh-icore.com.cn</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mt-1">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 mb-1">官方网站</h4>
+                                    <p class="text-gray-600">www.sh-icore.com.cn</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-lg mb-4">服务中心</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-gray-600">
+                                <span>北京</span>
+                                <span>西安</span>
+                                <span>沈阳</span>
+                                <span>郑州</span>
+                                <span>杭州</span>
+                                <span>武汉</span>
+                                <span>成都</span>
+                                <span>广州</span>
+                                <span>合肥</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-lg mb-4">关注我们</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fa fa-weixin"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <img src="statics/images/视频号.png" alt="微信视频号" class="w-10 h-10 object-contain">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">留言咨询</h3>
+                        <form>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">您的姓名</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="请输入您的姓名">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-medium mb-2">联系电话</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="请输入您的联系电话">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">电子邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="请输入您的电子邮箱">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="organization" class="block text-gray-700 font-medium mb-2">所属单位</label>
+                                <input type="text" id="organization" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="请输入您的所属单位">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="interest" class="block text-gray-700 font-medium mb-2">关注领域</label>
+                                <select id="interest" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                                    <option value="">请选择关注领域</option>
+                                    <option value="ai-agent">AI医疗智能体</option>
+                                    <option value="precision">精准医学</option>
+                                    <option value="research">智慧科研</option>
+                                    <option value="cooperation">战略合作</option>
+                                    <option value="other">其他</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">留言内容</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="请输入您的留言内容"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition font-medium">
+                                提交留言
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="statics/images/logo_white.png" alt="藤核智能科技" class="h-10 w-auto object-contain">
+                        <span class="text-xl font-bold">藤核智能科技</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        聚焦AI医疗的产学研用解决方案服务商，以AI赋能医疗，让精准科研与优质诊疗触手可及。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center text-gray-400" style="background-color: #333;">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center text-gray-400" style="background-color: #333;">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400">
+                            <img src="statics/images/视频号（反白）.png" alt="微信视频号" class="w-10 h-10 object-contain">
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">首页</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">关于我们</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition">产品中心</a></li>
+                        <li><a href="#technology" class="text-gray-400 hover:text-white transition">技术优势</a></li>
+                        <li><a href="#research" class="text-gray-400 hover:text-white transition">研发实力</a></li>
+                        <li><a href="#cases" class="text-gray-400 hover:text-white transition">合作案例</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">产品体系</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">AI医疗智能体</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">精准医学解决方案</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">智慧科研平台</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">数据治理平台</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">罕见病智能筛查系统</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">精准医学知识库</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">组学数据管理平台</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-400">上海市浦东新区张衡路666号1号楼</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-400">021-60936093</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-400">contact@sh-icore.com.cn</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-globe text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-400">www.sh-icore.com.cn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2025 上海藤核智能科技有限公司 版权所有 | 沪ICP备XXXXXXXX号
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">隐私政策</a>
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">服务条款</a>
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">网站地图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const backToTop = document.getElementById('backToTop');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 产品分类标签切换
+        const productTabs = document.querySelectorAll('.product-tab');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        productTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 切换标签样式
+                productTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-blue-600', 'text-white');
+                    t.classList.add('bg-white', 'text-gray-700');
+                });
+                this.classList.add('active', 'bg-blue-600', 'text-white');
+                this.classList.remove('bg-white', 'text-gray-700');
+                
+                // 筛选产品
+                const tabValue = this.getAttribute('data-tab');
+                productCards.forEach(card => {
+                    if (tabValue === 'all' || card.getAttribute('data-category') === tabValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 开发周期对比图表
+        const ctx = document.getElementById('devCycleChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['数据清洗', '编码调试', '整体开发周期'],
+                datasets: [
+                    {
+                        label: '传统开发',
+                        data: [60, 120, 270],
+                        backgroundColor: 'rgba(156, 163, 175, 0.5)',
+                        borderColor: 'rgba(156, 163, 175, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '智能开发',
+                        data: [1, 0, 8],
+                        backgroundColor: 'rgba(59, 130, 246, 0.5)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: '开发周期对比（单位：天）'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '天数'
+                        }
+                    }
+                }
+            }
+        });
+
+        // 回到顶部功能
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 关闭移动端菜单
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
